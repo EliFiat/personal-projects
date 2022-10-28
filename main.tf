@@ -41,7 +41,8 @@ data "aws_availability_zones" "available" {
 }
 
 
-### EC2 Instance
+### EC2 Instance ## https://stackoverflow.com/questions/71359239/terraform-how-to-output-multiple-value
+## in order to dynami
 resource "aws_instance" "web" {
   ami           = var.ami_ids
   # availability_zone = slice(data.aws_availability_zones.available.names, 0,3)
